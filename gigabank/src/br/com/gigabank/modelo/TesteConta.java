@@ -28,6 +28,10 @@ public class TesteConta {
 		System.out.println("Saldo Conta Destino " + c1.getTitular().getNome() + " : " + c1.getSaldo());
 		System.out.println("Saldo Conta Origem  " + c3.getTitular().getNome() + " : " + c3.getSaldo());
 
+		System.out.println(c3.getTotal());
+		
+		Conta c4  = new Conta(4567,1234,jose);
+		System.out.println(c4.getTotal());
 	}
 
 }
