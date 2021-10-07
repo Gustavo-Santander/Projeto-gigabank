@@ -2,9 +2,10 @@ package br.com.gigabank.modelo;
 
 public class Funcionario {
 
+	private final double INDICE = 0.5;
 	private String nome;
 	private String CPF;
-	private double salario;
+	protected double salario;
 	private int tipo;
 	// tipo 0 funcionario comum Tipo 2 = Gerente Tipo 3 = Diretor
 
@@ -42,19 +43,17 @@ public class Funcionario {
 	 * 
 	 * }
 	 */
-	
-	public double  getBonificacao() {
-		return this.salario *0.1;
+
+	public double getBonificacao() {
+		return this.salario * INDICE;
 	}
-	
 
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
-	
 
 	public double getSalario() {
-		return salario;
+		return salario +getBonificacao();
 	}
 
 	public int getTipo() {

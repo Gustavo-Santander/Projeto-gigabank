@@ -3,10 +3,29 @@ package br.com.gigabank.modelo;
 public class Cliente {
 
 	private String nome;
-	private String CPF;
-	private String profissao;
-	
-	
+	private String email;
+	private String telefone;
+	private Endereco endereco;
+	private String dataAberturaConta;
+	private String risco;
+	private double renda;
+
+	public Cliente() {
+		super();
+	}
+
+	public Cliente(String nome, String email, String telefone, Endereco endereco, String dataAberturaConta,
+			String risco, double renda) {
+		super();
+		this.nome = nome;
+		this.email = email;
+		this.telefone = telefone;
+		this.endereco = endereco;
+		this.dataAberturaConta = dataAberturaConta;
+		this.risco = risco;
+		this.renda = renda;
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -15,31 +34,52 @@ public class Cliente {
 		this.nome = nome;
 	}
 
-	public String getCPF() {
-		return CPF;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setCPF(String cPF) {
-		CPF = cPF;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getProfissao() {
-		return profissao;
+	public String getTelefone() {
+		return telefone;
 	}
 
-	public void setProfissao(String profissao) {
-		this.profissao = profissao;
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
 	}
 
-	
-
-	public Cliente() {
+	public String getDataAberturaConta() {
+		return dataAberturaConta;
 	}
 
-	public Cliente(String nome, String cPF, String profissao) {
-		this.nome = nome;
-		CPF = cPF;
-		this.profissao = profissao;
+	public void setDataAberturaConta(String dataAberturaConta) {
+		this.dataAberturaConta = dataAberturaConta;
+	}
+
+	public String getRisco() {
+		return risco;
+	}
+
+	public void setRisco(String risco) {
+		this.risco = risco;
+	}
+
+	public double getRenda() {
+		return renda;
+	}
+
+	public void setRenda(double renda) {
+		this.renda = renda;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 
 }

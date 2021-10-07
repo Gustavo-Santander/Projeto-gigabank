@@ -4,7 +4,7 @@ public class Conta {
 
 	private int numero;
 	private int agencia;
-	private double saldo;
+	protected double saldo;
 	private Cliente titular;
 	
 	private static int total;

@@ -21,16 +21,23 @@ public class TesteFuncionario {
 			System.out.println("Senha Alterada com Sucesso");
 		else
 			System.out.println("Senha nao Alterada com Sucesso");
-		
+
+		if (g1.AutenticarSenha("1234", "teste@gmail.com.br"))
+			System.out.println("Logado com sucesso " + g1.getNome());
+		else
+			System.out.println("Login Incorreto");
+
 		Diretor d1 = new Diretor();
-		
+
 		d1.setSalario(500.0);
-		System.out.println(d1.getBonificacao());
-		
+		System.out.println("Valor do Salario:" + d1.VerSalario());
+		System.out.println("Valor da Bonificacao:" + d1.getBonificacao());
+		System.out.println("Valor do Salario Total:" + d1.getSalario());
+
 		g1.setSalario(1000.0);
-		System.out.println(g1.getBonificacao());
-		
-		
+		System.out.println("Valor da Bonificacao:" + g1.getBonificacao());
+		System.out.println("Valor do Salario Total:" + g1.getSalario());
+
 	}
 
 }
