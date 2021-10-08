@@ -6,7 +6,7 @@ public class ContaCorrente extends Conta {
 	private boolean especial;
 
 	public ContaCorrente() {
-
+		
 	}
 
 	public ContaCorrente(double limite, boolean especial) {
@@ -44,7 +44,7 @@ public class ContaCorrente extends Conta {
 		if (this.limite +  getSaldo()  >= valor && valor > 0)
 		{
 			this.saldo  -= valor;
-			super.transferir(valor, destino);
+			destino.depositar(valor);
 		return true;
 		}
 		return false;
